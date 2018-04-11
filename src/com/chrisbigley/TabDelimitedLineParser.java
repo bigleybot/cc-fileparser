@@ -14,7 +14,9 @@ import java.util.stream.Stream;
 
 public class TabDelimitedLineParser implements ILineParser {
 
+    //path of the file to be parsed
     private String filePath;
+    //current index used to track which line of the file is next to be parsed
     private int currentLineIndex;
 
     /**
@@ -23,6 +25,7 @@ public class TabDelimitedLineParser implements ILineParser {
      * @param filePath absolute path of the file that the class will use to parse
      */
     public TabDelimitedLineParser(String filePath) {
+        //set the current line index to 0
         this.currentLineIndex = 0;
         this.filePath = filePath;
     }
@@ -66,6 +69,7 @@ public class TabDelimitedLineParser implements ILineParser {
 
     /**
      * This method resets the current index of the class to 0
+     *
      */
     public void resetCurrentIndex() {
         this.currentLineIndex = 0;
